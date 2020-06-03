@@ -10,6 +10,5 @@ public:
 	Triangle(int, int, double);
 	double Area();
 	~Triangle();
-	
+	void PrintData();
 };
-

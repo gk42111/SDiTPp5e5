@@ -11,7 +11,6 @@ public:
 	Polygon(int NumberOfSides, int X, int Y);
 	double Perimeter();
 	~Polygon();
-
-	
-};
-
+	virtual double Area() = 0;
+	virtual void PrintData() = 0;
+};

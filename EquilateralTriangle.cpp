@@ -2,7 +2,7 @@
 #include <cmath>
 #include <iostream>
 
-EquilateralTriangle::EquilateralTriangle(int X, int Y, double Side) : Triangle(X,Y)
+EquilateralTriangle::EquilateralTriangle(int X, int Y, double Side) : Triangle(X, Y)
 {
 	this->Side = Side;
 	Sides = new double[NumbersOfSides];
@@ -10,7 +10,6 @@ EquilateralTriangle::EquilateralTriangle(int X, int Y, double Side) : Triangle(X
 	{
 		Sides[i] = Side;
 	}
-	o
 }
 
 double EquilateralTriangle::Area()
@@ -21,7 +20,7 @@ double EquilateralTriangle::Area()
 EquilateralTriangle::~EquilateralTriangle()
 {
 }
-std::ostream & operator<<(std::ostream & wyjscie, const EquilateralTriangle & s)
+void EquilateralTriangle::PrintData()
 {
-	ony:\t" << s.X << " " << s.Y << std::endl << "Obwód\t" << s.obwod << std::endl << "Pole\t" << s.pole << std::endl;
+	std::cout << "To jest trojkat rownoboczny" << std::endl << "Polozony:\t" << X << " " << Y << std::endl << "Obwod:\t" << Perimeter() << std::endl << "Pole:\t" << Area() << std::endl;
 }

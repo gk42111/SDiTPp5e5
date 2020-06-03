@@ -11,7 +11,7 @@ int main() {
 	wsk[1] = new EquilateralTriangle(4, 5, 6);
 	wsk[2] = new Rectangle(7, 8, 9);
 	for (int i = 0; i < 3; i++) {
-		cout << wsk[i];
+		wsk[i]->PrintData();
 	}
 
 	system("pause");

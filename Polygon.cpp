@@ -1,4 +1,4 @@
-#include "Polygon.h"
+ï»¿#include "Polygon.h"
 #include <iostream>
 Polygon::Polygon()
 {
@@ -16,7 +16,7 @@ Polygon::Polygon(int NumbersOfSides, int X, int Y)
 	Sides = new double[NumbersOfSides];
 	for (int i = 0; i < NumbersOfSides; i++)
 	{
-		std::cout << "Podaj dlugoœæ boku nr \t" << i + 1 <<std::endl;
+		std::cout << "Podaj dlugoÅ“Ã¦ boku nr \t" << i + 1 << std::endl;
 		std::cin >> Sides[i];
 	}
 }
@@ -31,4 +31,3 @@ double Polygon::Perimeter()
 	return Perim;
 }
 Polygon::~Polygon() {}
-
