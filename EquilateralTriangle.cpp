@@ -10,6 +10,8 @@ EquilateralTriangle::EquilateralTriangle(int X, int Y, double Side) : Triangle(X
 	{
 		Sides[i] = Side;
 	}
+	obwod = Perimeter();
+	pole = Area();
 }
 
 double EquilateralTriangle::Area()
@@ -17,10 +19,17 @@ double EquilateralTriangle::Area()
 	return Side * Side *sqrt(3) / 4;
 }
 
+void EquilateralTriangle::PrintData()
+{
+	cout << this;
+}
+
 EquilateralTriangle::~EquilateralTriangle()
 {
 }
-void EquilateralTriangle::PrintData()
+
+
+ostream & operator<<(ostream & wyjscie, const EquilateralTriangle & s)
 {
-	std::cout << "To jest trojkat rownoboczny" << std::endl << "Polozony:\t" << X << " " << Y << std::endl << "Obwod:\t" << Perimeter() << std::endl << "Pole:\t" << Area() << std::endl;
+	return wyjscie << "to jest trojkat rownoboczny polozony " << s.X << " " << s.Y << " Pole:" << s.pole << " Obwod: " << s.obwod << std::endl;
 }

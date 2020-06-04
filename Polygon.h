@@ -1,4 +1,8 @@
 #pragma once
+#include <string>
+#include<sstream>
+
+using namespace std;
 class Polygon
 {
 protected:
@@ -10,7 +14,7 @@ public:
 	Polygon(int X, int Y);
 	Polygon(int NumberOfSides, int X, int Y);
 	double Perimeter();
-	~Polygon();
 	virtual double Area() = 0;
 	virtual void PrintData() = 0;
+	~Polygon();
 };
