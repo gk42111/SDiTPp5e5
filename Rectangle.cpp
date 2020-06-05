@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include "Rectangle.h"
 Rectangle::Rectangle(int X, int Y, double Side) :Polygon(X, Y)
@@ -9,8 +10,7 @@ Rectangle::Rectangle(int X, int Y, double Side) :Polygon(X, Y)
 	{
 		Sides[i] = Side;
 	}
-	obwod = Perimeter();
-	pole = Area();
+
 }
 Rectangle::~Rectangle()
 {
@@ -22,10 +22,6 @@ double Rectangle::Area()
 
 void Rectangle::PrintData()
 {
-	cout << this;
-}
-
-ostream & operator<<(ostream & wyjscie, const Rectangle & s)
-{
-	return wyjscie << "to jest prostokat polozony " << s.X << " " << s.Y << " Pole:" << s.pole << " Obwod: " << s.obwod << std::endl;
+	pole = Perimeter();
+	obwod = Area();
 }
